@@ -27,14 +27,6 @@ SolarSystem.prototype.setPlanets = function () {
   this.planets.push(new Planet("Neptune", 0.00047460074811487044, 2790000000, "1.024 x 10^26 kg", "15,299 mi", "164.8 yr; 60,182 days; 89,666 Neptunian solar days;", "0d 16h 6m", "2.68 km/s (9,650 km/h)"));
 };
 
-// space travel:
-function Juno() {
-  this.speedMilesPerHour = 25;
-}
-
-// Juno.prototype.getTravelTime = function (planetStart, planetFinish) {
-//   return (planetFinish.milesFromSun - planetStart.milesFromSun) / this.speedMilesPerHour;
-// };
 
 var lightDaysDistance = function (planetStart, planetFinish) {
   return (planetFinish.milesFromSun - planetStart.milesFromSun) * 365;
@@ -65,8 +57,8 @@ function MarsScienceLaboratory() {
 var getPixelDistance = function(inputTime, speed) {
   // inputTime is in h
   var speed;//km p h
-  var distance = (inputTime * speed); //km
-  var distanceAU = distance / 150000; //AU
+  var distance = ((inputTime*24) * speed); //km
+  var distanceAU = distance / 150000000; //AU
   var distancePX = distanceAU * 50; //px
   return distancePX;
 }
@@ -88,7 +80,19 @@ $(document).ready(function() {
   }
 
   var apollo = new Apollo11();
-  var inputTime = $("#input").val();
-  var pixelDistance = getPixelDistance(inputTime, apollo.speedKmPerHour);
+  var msl = new MarsScienceLaboratory();
 
-})
+  $("#inputForm").submit(function(event) {
+    event.preventDefault();
+
+    var inputTime = parseInt($("#input").val());
+    var pixelDistance = getPixelDistance(inputTime, msl.speedKmPerHour);
+
+
+    var ellipse = document.getElementById("travel");
+    ellipse.setAttributeNS(null, "rx", pixelDistance);
+    ellipse.setAttributeNS(null, "ry", pixelDistance);
+
+
+  });
+});
