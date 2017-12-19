@@ -73,7 +73,7 @@ var getPixelDistance = function(inputTime, speed) {
 
 //front end
 
-$(document).ready(function() {
+$(document).ready(function(event) {
 
   var solarSystem = new SolarSystem();
   solarSystem.setPlanets();
@@ -91,4 +91,13 @@ $(document).ready(function() {
   var inputTime = $("#input").val();
   var pixelDistance = getPixelDistance(inputTime, apollo.speedKmPerHour);
 
+  $("#about-section").click(function(event) {
+    $(".about-div").show();
+    $(".spaceTravel-div").hide();
+  });
+
+  $("#space-travel").click(function(event) {
+    $(".spaceTravel-div").show();
+    $(".about-div").hide();
+  });
 })
