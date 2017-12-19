@@ -1,9 +1,21 @@
+body  {
+  background-image: url(../img/star1.jpg);
+}
+
+.orbit {
+  fill: none;
+  stroke: white;
+  opacity: .50;
+  stroke-dasharray: 15, 20;
+  stroke-width: 2;
+}
+
+.neptune-dot {
+
+}
+
 .tooltip-inner {
   max-width: 800px;
 }
 
-
-title {
-  background-color: black;
-  color: white;
-}
+/*style="fill:none;stroke:green;stroke-width:2"*/
