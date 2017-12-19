@@ -13,30 +13,51 @@
 
       <svg width="2000" height="2000" viewBox="0 0 2000 2000" xmlns="http://www.w3.org/2000/svg">
           <defs>
-            <pattern id="neptune-img" patternContentUnits="objectBoundingBox" height="100" width="100">
+            <pattern id="sun-img" patternContentUnits="objectBoundingBox" height="1" width="1">
+              <image x="0" y="0" height="1" width="1" xlink:href="https://i.imgur.com/sOMbbRR.png" preserveAspectRatio = "none"></image>
+            </pattern>
+            <pattern id="mercury-img" patternContentUnits="objectBoundingBox" height="1" width="1">
+              <image x="0" y="0" height="1" width="1" xlink:href="https://i.imgur.com/hWDUd4h.png" preserveAspectRatio = "none"></image>
+            </pattern>
+            <pattern id="venus-img" patternContentUnits="objectBoundingBox" height="1" width="1">
+              <image x="0" y="0" height="1" width="1" xlink:href="https://i.imgur.com/EhrAgbr.jpg" preserveAspectRatio = "none"></image>
+            </pattern>
+            <pattern id="earth-img" patternContentUnits="objectBoundingBox" height="1" width="1">
+              <image x="0" y="0" height="1" width="1" xlink:href="https://i.imgur.com/UPJ5IQd.png" preserveAspectRatio = "none"></image>
+            </pattern>
+            <pattern id="mars-img" patternContentUnits="objectBoundingBox" height="1" width="1">
+              <image x="0" y="0" height="1" width="1" xlink:href="https://i.imgur.com/mhXpvfr.png" preserveAspectRatio = "none"></image>
+            </pattern>
+            <pattern id="jupiter-img" patternContentUnits="objectBoundingBox" height="1" width="1">
+              <image x="0" y="0" height="1" width="1" xlink:href="https://i.imgur.com/JIzghJR.png" preserveAspectRatio = "none"></image>
+            </pattern>
+            <pattern id="saturn-img" patternContentUnits="objectBoundingBox" height="1" width="1">
+              <image x="0" y="0" height="1" width="1" xlink:href="https://i.imgur.com/b77itb0.png" preserveAspectRatio = "none"></image>
+            </pattern>
+            <pattern id="neptune-img" patternContentUnits="objectBoundingBox" height="1" width="1">
               <image x="0" y="0" height="1" width="1" xlink:href="https://i.imgur.com/v7pCn0Q.png" preserveAspectRatio = "none"></image>
             </pattern>
-            <pattern id="uranus-img" patternContentUnits="objectBoundingBox" height="100" width="100">
+            <pattern id="uranus-img" patternContentUnits="objectBoundingBox" height="1" width="1">
               <image x="0" y="0" height="1" width="1" xlink:href="https://i.imgur.com/RK5R1Zo.png" preserveAspectRatio = "none"></image>
             </pattern>
           </defs>
-          <ellipse class="sun" cx="0" cy="500" rx="20" ry="20" style="fill:yellow;stroke:yellow;stroke-width:2" />
+          <ellipse class="sun" cx="0" cy="500" rx="20" ry="20" fill="url(#sun-img)" />
           <ellipse class="mercury orbit" cx="0" cy="500" rx="30" ry="30" />
-          <ellipse id="0" class="mercury-dot" cx="30" cy="500" rx="3" ry="3" style="fill:purple;stroke:purple;stroke-width:2" />
+          <ellipse id="0" class="mercury-dot" cx="30" cy="500" rx="5" ry="5" fill="url(#mercury-img)" />
           <ellipse class="venus orbit" cx="0" cy="500" rx="45" ry="45" />
-          <ellipse id="1" class="venus-dot" cx="32" cy="468" rx="3" ry="3" style="fill:purple;stroke:purple;stroke-width:2" />
+          <ellipse id="1" class="venus-dot" cx="32" cy="468" rx="7" ry="7" fill="url(#venus-img)"/>
           <ellipse class="earth orbit" cx="0" cy="500" rx="60" ry="60"  />
-          <ellipse id="2" class="earth-dot" cx="52" cy="530" rx="3" ry="3" style="fill:blue;stroke:blue;stroke-width:2" />
+          <ellipse id="2" class="earth-dot" cx="52" cy="530" rx="10" ry="10" fill="url(#earth-img)" />
           <ellipse class="mars orbit" cx="0" cy="500" rx="85" ry="85" />
-          <ellipse id="3" class="mars-dot" cx="85" cy="500" rx="3" ry="3" style="fill:purple;stroke:purple;stroke-width:2" />
+          <ellipse id="3" class="mars-dot" cx="85" cy="500" rx="7" ry="7" fill="url(#mars-img)" />
           <ellipse class="jupiter orbit" cx="0" cy="500" rx="270" ry="270"  />
-          <ellipse id="4" class="jupiter-dot" cx="234" cy="365" rx="5" ry="5" style="fill:purple;stroke:purple;stroke-width:2" />
+          <ellipse id="4" class="jupiter-dot" cx="234" cy="365" rx="55" ry="40" fill="url(#jupiter-img)" />
           <ellipse class="saturn orbit" cx="0" cy="500" rx="475" ry="475" />
-          <ellipse id="5" class="saturn-dot" cx="411" cy="738" rx="5" ry="5" style="fill:purple;stroke:purple;stroke-width:2" />
+          <ellipse id="5" class="saturn-dot" cx="411" cy="738" rx="75" ry="40" fill="url(#saturn-img)" />
           <ellipse class="uranus orbit" cx="0" cy="500" rx="950" ry="950"  />
-          <ellipse id="6" class="uranus-dot" cx="950" cy="500" rx="35" ry="35" fill="url(#uranus-img)" style="stroke:none;stroke-width:2" />
+          <ellipse id="6" class="uranus-dot" cx="950" cy="500" rx="35" ry="35" fill="url(#uranus-img)" />
           <ellipse class="neptune orbit" cx="0" cy="500" rx="1500" ry="1500"  />
-          <ellipse id="7" class="neptune-dot" cx="1485" cy="710" rx="15" ry="15" fill="url(#neptune-img)"  style="stroke:none;stroke-width:2" />
+          <ellipse id="7" class="neptune-dot" cx="1485" cy="710" rx="25" ry="25" fill="url(#neptune-img)" />
 
       </svg>
 
