@@ -43,14 +43,14 @@ var lightDaysDistance = function (planetStart, planetFinish) {
 Planet.prototype.getInfo = function () {
   var str = "";
 
-  str += "Name: " + this.name + '<br>';
-  str += "Distance from sun: " + this.lightYearsFromSun + " light years" + '<br>';
-  str += "Distance from sun: " + this.milesFromSun + " miles" + '<br>';
-  str += "Mass: " + this.mass + '<br>';
-  str += "Radius: " + this.radius + '<br>';
-  str += "Orbital period: " + this.orbitalPeriod + '<br>';
-  str += "Length of day: " + this.lengthOfDay + '<br>';
-  str += "Equatorial rotation velocity: " + this.equatorialRotationVelocity + '<br>';
+  str += '<span id="' + this.name + '">' + "Name:" +'</span> ' + this.name + '<br>';
+  str += '<span id="' + this.name + '">' + "Distance from sun:" +'</span> ' + this.lightYearsFromSun + " light years" + '<br>';
+  str += '<span id="' + this.name + '">' + "Distance from sun:" +'</span> ' + this.milesFromSun + " miles" + '<br>';
+  str += '<span id="' + this.name + '">' + "Mass:" +'</span> ' + this.mass + '<br>';
+  str += '<span id="' + this.name + '">' + "Radius:" +'</span> ' + this.radius + '<br>';
+  str += '<span id="' + this.name + '">' + "Orbital period:" +'</span> ' + this.orbitalPeriod + '<br>';
+  str += '<span id="' + this.name + '">' + "Length of day:" +'</span> ' + this.lengthOfDay + '<br>';
+  str += '<span id="' + this.name + '">' + "Equatorial rotation velocity:" +'</span> ' + this.equatorialRotationVelocity + '<br>';
   return str;
 };
 
