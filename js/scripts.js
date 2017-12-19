@@ -65,7 +65,7 @@ var getPixelDistance = function(inputTime, speed) {
 
 //front end
 
-$(document).ready(function() {
+$(document).ready(function(event) {
 
   var solarSystem = new SolarSystem();
   solarSystem.setPlanets();

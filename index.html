@@ -1,54 +1,52 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-3.2.1.js"></script>
-    <script src="js/scripts.js"></script>
+    <script src="js/script.js"></script>
     <title></title>
   </head>
   <body>
-
-      <svg width="2000" height="2000" viewBox="0 0 2000 2000" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <pattern id="uranus-img" patternContentUnits="objectBoundingBox" height="100" width="100">
-              <image x="0" y="0" height="1" width="1" xlink:href="https://i.imgur.com/RK5R1Zo.png" preserveAspectRatio = "none"></image>
-            </pattern>
-            <pattern id="neptune-img" patternContentUnits="objectBoundingBox" height="100" width="100">
-              <image x="0" y="0" height="1" width="1" xlink:href="https://i.imgur.com/v7pCn0Q.png" preserveAspectRatio = "none"></image>
-            </pattern>
-          </defs>
-          <ellipse class="sun" cx="0" cy="500" rx="20" ry="20" style="fill:yellow;stroke:yellow;stroke-width:2" />
-          <ellipse class="mercury orbit" cx="0" cy="500" rx="30" ry="30" />
-          <ellipse class="mercury-dot" cx="30" cy="500" rx="3" ry="3" style="fill:purple;stroke:purple;stroke-width:2" />
-          <ellipse class="venus orbit" cx="0" cy="500" rx="45" ry="45" />
-          <ellipse class="venus-dot" cx="32" cy="468" rx="3" ry="3" style="fill:purple;stroke:purple;stroke-width:2" />
-          <ellipse class="earth orbit" cx="0" cy="500" rx="60" ry="60"  />
-          <ellipse class="earth-dot" cx="52" cy="530" rx="3" ry="3" style="fill:blue;stroke:blue;stroke-width:2" />
-          <ellipse class="mars orbit" cx="0" cy="500" rx="85" ry="85" />
-          <ellipse class="mars-dot" cx="85" cy="500" rx="3" ry="3" style="fill:purple;stroke:purple;stroke-width:2" />
-          <ellipse class="jupiter orbit" cx="0" cy="500" rx="270" ry="270"  />
-          <ellipse class="jupiter-dot" cx="234" cy="365" rx="5" ry="5" style="fill:purple;stroke:purple;stroke-width:2" />
-          <ellipse class="saturn orbit" cx="0" cy="500" rx="475" ry="475" />
-          <ellipse class="saturn-dot" cx="411" cy="738" rx="5" ry="5" style="fill:purple;stroke:purple;stroke-width:2" />
-          <ellipse class="uranus orbit" cx="0" cy="500" rx="950" ry="950"  />
-          <ellipse class="uranus-dot" cx="950" cy="500" rx="35" ry="35" fill="url(#uranus-img)" style="stroke:none;stroke-width:2" />
-          <ellipse class="neptune orbit" cx="0" cy="500" rx="1500" ry="1500"  />
-          <ellipse class="neptune-dot" cx="1485" cy="710" rx="15" ry="15" fill="url(#neptune-img)"  style="stroke:none;stroke-width:2" />
-
-      </svg>
-
+    <div class="container">
+      <div class="row">
+        <div class="col-md-9 col-md-offset-1">
+            <div class="panel panel-default main-landing-panel panel-transparent">
+              <div class="panel-heading">
+                <h1>Explore the Solar System</h1>
+              </div>
+              <div class="panel-body">
+                <div class="row">
+                  <div class="col-md-3">
+                      <div class="panel panel-default left-sidebar">
+                        <div class="panel-body">
+                            <button class="btn-link" id="about-section" type="button">About</button>
+                            <hr>
+                            <button class="btn-link" id="svg-system" type="button"><a href="solarSystem.html">Solar System</a></button>
+                            <hr>
+                            <button class="btn-link" id="space-travel" type="button">Space Travel</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="panel panel-default about-div panel-transparent">
+                          <div class="panel-body">
+                            <p>This is the about text.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-9">
+                          <div class="panel panel-default spaceTravel-div panel-transparent">
+                            <div class="panel-body">
+                              <p>This is the travel text.</p>
+                            </div>
+                          </div>
+                        </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
   </body>
 </html>
-
-<!--
-mercury 0.4 AU
-venus 0.7 AU
-earth 1.0 AU
-mars 1.5 AU
-jupiter 5.2 AU
-saturn 9.5 AU
-uranus 19 AU
-neptune 30 AU
--->
