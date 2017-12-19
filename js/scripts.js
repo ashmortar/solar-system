@@ -62,7 +62,7 @@ function MarsScienceLaboratory() {
   this.speedKmPerHour = 93295;
 }
 
-var getPixelDistance(inputTime, speed) {
+var getPixelDistance = function(inputTime, speed) {
   // inputTime is in h
   var speed;//km p h
   var distance = (inputTime * speed); //km
@@ -86,5 +86,9 @@ $(document).ready(function() {
       'html': 'true'
     });
   }
+
+  var apollo = new Apollo11();
+  var inputTime = $("#input").val();
+  var pixelDistance = getPixelDistance(inputTime, apollo.speedKmPerHour);
 
 })
