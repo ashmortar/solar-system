@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Solar system</title>
+  </head>
+  <body>
+    <!-- <object id="travel-svg" width="400" height="300" type="image/svg+xml" data="moving_circle.svg"></object> -->
+    <svg width="2000" height="2000" viewBox="0 0 2000 2000" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <pattern id="sun-img" patternContentUnits="objectBoundingBox" height="1" width="1">
+            <image x="0" y="0" height="1" width="1" xlink:href="https://i.imgur.com/sOMbbRR.png" preserveAspectRatio = "none"></image>
+          </pattern>
+          <pattern id="mercury-img" patternContentUnits="objectBoundingBox" height="1" width="1">
+            <image x="0" y="0" height="1" width="1" xlink:href="https://i.imgur.com/hWDUd4h.png" preserveAspectRatio = "none"></image>
+          </pattern>
+          <pattern id="venus-img" patternContentUnits="objectBoundingBox" height="1" width="1">
+            <image x="0" y="0" height="1" width="1" xlink:href="https://i.imgur.com/EhrAgbr.jpg" preserveAspectRatio = "none"></image>
+          </pattern>
+          <pattern id="earth-img" patternContentUnits="objectBoundingBox" height="1" width="1">
+            <image x="0" y="0" height="1" width="1" xlink:href="https://i.imgur.com/UPJ5IQd.png" preserveAspectRatio = "none"></image>
+          </pattern>
+          <pattern id="mars-img" patternContentUnits="objectBoundingBox" height="1" width="1">
+            <image x="0" y="0" height="1" width="1" xlink:href="https://i.imgur.com/mhXpvfr.png" preserveAspectRatio = "none"></image>
+          </pattern>
+          <pattern id="jupiter-img" patternContentUnits="objectBoundingBox" height="1" width="1">
+            <image x="0" y="0" height="1" width="1" xlink:href="https://i.imgur.com/JIzghJR.png" preserveAspectRatio = "none"></image>
+          </pattern>
+          <pattern id="saturn-img" patternContentUnits="objectBoundingBox" height="1" width="1">
+            <image x="0" y="0" height="1" width="1" xlink:href="https://i.imgur.com/b77itb0.png" preserveAspectRatio = "none"></image>
+          </pattern>
+          <pattern id="neptune-img" patternContentUnits="objectBoundingBox" height="1" width="1">
+            <image x="0" y="0" height="1" width="1" xlink:href="https://i.imgur.com/v7pCn0Q.png" preserveAspectRatio = "none"></image>
+          </pattern>
+          <pattern id="uranus-img" patternContentUnits="objectBoundingBox" height="1" width="1">
+            <image x="0" y="0" height="1" width="1" xlink:href="https://i.imgur.com/RK5R1Zo.png" preserveAspectRatio = "none"></image>
+          </pattern>
+        </defs>
+        <ellipse id="travel" class="travel-range" cx="60" cy="500" rx="0" ry="0"/>
+        <ellipse class="sun" cx="0" cy="500" rx="20" ry="20" fill="url(#sun-img)" />
+        <!-- was originally set to 10 r -->
+        <ellipse class="mercury orbit" cx="0" cy="500" rx="30" ry="30" />
+        <ellipse id="0" class="mercury-dot" cx="26" cy="515" rx="5" ry="5" fill="url(#mercury-img)" />
+        <ellipse class="venus orbit" cx="0" cy="500" rx="45" ry="45" />
+        <ellipse id="1" class="venus-dot" cx="32" cy="468" rx="7" ry="7" fill="url(#venus-img)"/>
+        <ellipse class="earth orbit" cx="0" cy="500" rx="60" ry="60"  />
+        <ellipse id="2" class="earth-dot" cx="60" cy="500" rx="10" ry="10" fill="url(#earth-img)" />
+        <ellipse class="mars orbit" cx="0" cy="500" rx="85" ry="85" />
+        <ellipse id="3" class="mars-dot" cx="60" cy="560" rx="7" ry="7" fill="url(#mars-img)" />
+        <ellipse class="jupiter orbit" cx="0" cy="500" rx="270" ry="270"  />
+        <ellipse id="4" class="jupiter-dot" cx="234" cy="365" rx="55" ry="40" fill="url(#jupiter-img)" />
+        <ellipse class="saturn orbit" cx="0" cy="500" rx="475" ry="475" />
+        <ellipse id="5" class="saturn-dot" cx="411" cy="738" rx="75" ry="40" fill="url(#saturn-img)" />
+        <ellipse class="uranus orbit" cx="0" cy="500" rx="950" ry="950"  />
+        <ellipse id="6" class="uranus-dot" cx="950" cy="500" rx="35" ry="35" fill="url(#uranus-img)" />
+        <ellipse class="neptune orbit" cx="0" cy="500" rx="1500" ry="1500"  />
+        <ellipse id="7" class="neptune-dot" cx="1485" cy="710" rx="25" ry="25" fill="url(#neptune-img)" />
+
+
+    </svg>
+    <div class="input-rect">
+      <form id="inputForm">
+        <p>Enter how many days you are willing to travel:</p>
+        <input id="input" type="number" value="35">
+        <button type="submit">submit</button>
+      </form>
+    </div>
+  </body>
+</html>
+
+<!--
+mercury 0.4 AU
+venus 0.7 AU
+earth 1.0 AU
+mars 1.5 AU
+jupiter 5.2 AU
+saturn 9.5 AU
+uranus 19 AU
+neptune 30 AU
+-->

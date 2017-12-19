@@ -10,7 +10,83 @@ body  {
   stroke-width: 2;
 }
 
-.neptune-dot {
-
+#travel {
+  fill: red;
+  opacity: .25;
 }
+
+.tooltip-inner {
+  max-width: 800px;
+  font-family: monospace;
+  font-size: 1.5em;
+  text-align: left;
+  background-color: rgba(0, 0, 0, 0.1)
+}
+
+.input-rect {
+  float: right;
+  font-family: monospace;
+  text-align: left;
+  font-size: 20px;
+  font-weight: 100;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 50px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: normal;
+  position: absolute;
+  right: 5%;
+  top: 5%;
+}
+
+input[type=number]{
+  color: black;
+  background-color: rgba(255, 255, 255, 0.75);
+  border: none;
+}
+
+button {
+  color: black;
+}
+
+#Neptune {
+  color: #537cfe;
+  text-decoration: underline;
+}
+
+#Uranus {
+  color: #C7EDF0;
+  text-decoration: underline;
+}
+
+#Saturn {
+  color: #A88B6D;
+  text-decoration: underline;
+}
+
+#Jupiter {
+  color: #C1844D;
+  text-decoration: underline;
+}
+
+#Mars {
+  color: #b53b03;
+  text-decoration: underline;
+}
+
+#Earth {
+  color: #2873ff;
+  text-decoration: underline;
+}
+
+#Venus {
+  color: #de5f25;
+  text-decoration: underline;
+}
+
+#Mercury {
+  color:#bfbfbf;
+  text-decoration: underline;
+}
+
 /*style="fill:none;stroke:green;stroke-width:2"*/
