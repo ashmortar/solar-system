@@ -32,9 +32,9 @@ function Juno() {
   this.speedMilesPerHour = 25;
 }
 
-Juno.prototype.getTravelTime = function (planetStart, planetFinish) {
-  return (planetFinish.milesFromSun - planetStart.milesFromSun) / this.speedMilesPerHour;
-};
+// Juno.prototype.getTravelTime = function (planetStart, planetFinish) {
+//   return (planetFinish.milesFromSun - planetStart.milesFromSun) / this.speedMilesPerHour;
+// };
 
 var lightDaysDistance = function (planetStart, planetFinish) {
   return (planetFinish.milesFromSun - planetStart.milesFromSun) * 365;
@@ -54,6 +54,22 @@ Planet.prototype.getInfo = function () {
   return str;
 };
 
+function Apollo11() {
+  this.speedKmPerHour = 5338;
+}
+
+function MarsScienceLaboratory() {
+  this.speedKmPerHour = 93295;
+}
+
+var getPixelDistance(inputTime, speed) {
+  // inputTime is in h
+  var speed;//km p h
+  var distance = (inputTime * speed); //km
+  var distanceAU = distance / 150000; //AU
+  var distancePX = distanceAU * 50; //px
+  return distancePX;
+}
 
 //front end
 
