@@ -27,14 +27,14 @@ SolarSystem.prototype.setPlanets = function () {
   this.planets.push(new Planet("Neptune", 0.00047460074811487044, 2790000000, "1.024 x 10^26 kg", "15,299 mi", "164.8 yr; 60,182 days; 89,666 Neptunian solar days;", "0d 16h 6m", "2.68 km/s (9,650 km/h)"));
 };
 
-//space travel:
-// function Juno() {
-//   this.speedMilesPerHour = 25;
-// }
-//
-// Juno.prototype.getTravelTime = function (planetStart, planetFinish) {
-//   return (planetFinish.milesFromSun - planetStart.milesFromSun) / this.speedMilesPerHour;
-// };
+// space travel:
+function Juno() {
+  this.speedMilesPerHour = 25;
+}
+
+Juno.prototype.getTravelTime = function (planetStart, planetFinish) {
+  return (planetFinish.milesFromSun - planetStart.milesFromSun) / this.speedMilesPerHour;
+};
 
 var lightDaysDistance = function (planetStart, planetFinish) {
   return (planetFinish.milesFromSun - planetStart.milesFromSun) * 365;
@@ -43,14 +43,14 @@ var lightDaysDistance = function (planetStart, planetFinish) {
 Planet.prototype.getInfo = function () {
   var str = "";
 
-  str += "Name: " + this.name + "<br>";
-  str += "Distance from sun: " + this.lightYearsFromSun + " light years" + "<br>";
-  str += "Distance from sun: " + this.milesFromSun + " miles" + "<br>";
-  str += "Mass: " + this.mass + "<br>";
-  str += "Radius: " + this.radius + "<br>";
-  str += "Orbital period: " + this.orbitalPeriod + "<br>";
-  str += "Length of day: " + this.lengthOfDay + "<br>";
-  str += "Equatorial rotation velocity: " + this.equatorialRotationVelocity + "<br>";
+  str += "Name: " + this.name + '<br>';
+  str += "Distance from sun: " + this.lightYearsFromSun + " light years" + '<br>';
+  str += "Distance from sun: " + this.milesFromSun + " miles" + '<br>';
+  str += "Mass: " + this.mass + '<br>';
+  str += "Radius: " + this.radius + '<br>';
+  str += "Orbital period: " + this.orbitalPeriod + '<br>';
+  str += "Length of day: " + this.lengthOfDay + '<br>';
+  str += "Equatorial rotation velocity: " + this.equatorialRotationVelocity + '<br>';
   return str;
 };
 
@@ -58,25 +58,17 @@ Planet.prototype.getInfo = function () {
 //front end
 
 $(document).ready(function() {
-  $(".info").hide();
-  $("li").hover(function() {
-    $(".info").hide();
-    // debugger;
-    var solarSystem = new SolarSystem();
-    solarSystem.setPlanets();
-    // alert($(this).next().attr('id'));
-    $(this).next().text(solarSystem.planets[$(this).next().attr('id')].getInfo())
-    $(this).next().show();
-  })
-  // $(".button").click(function() {
-  //   var solarSystem = new SolarSystem();
-  //   solarSystem.setPlanets();
-  //   alert(solarSystem.planets[5].getInfo());
-  // })
 
-  //testing for tooltips below-------
   var solarSystem = new SolarSystem();
   solarSystem.setPlanets();
-  //document.getElementById("test").setAttribute("title", solarSystem.planets[0].getInfo());
-  $("#test").tooltip({title: solarSystem.planets[0].getInfo(), html: true});
+
+  for (var i=0; i<solarSystem.planets.length; i++) {
+    $("#" + i).tooltip({
+      'container': 'body',
+      'placement': 'bottom',
+      'title': solarSystem.planets[i].getInfo(),
+      'html': 'true'
+    });
+  }
+
 })
