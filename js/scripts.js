@@ -73,4 +73,10 @@ $(document).ready(function() {
   //   solarSystem.setPlanets();
   //   alert(solarSystem.planets[5].getInfo());
   // })
+
+  //testing for tooltips below-------
+  var solarSystem = new SolarSystem();
+  solarSystem.setPlanets();
+  //document.getElementById("test").setAttribute("title", solarSystem.planets[0].getInfo());
+  $("#test").tooltip({title: solarSystem.planets[0].getInfo(), html: true});
 })
