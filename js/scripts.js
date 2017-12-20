@@ -73,7 +73,6 @@ var constantThrust = function(inputTime) {
   var d = a * Math.pow((t / 2), 2);
   var distanceAU = d / 150000000000;
   var distancePX = distanceAU * 50;
-  alert(distancePX);
   return distancePX;
 }
 
