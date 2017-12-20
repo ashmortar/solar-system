@@ -42,7 +42,10 @@
           </pattern>
         </defs>
         <ellipse id="travel-apollo" class="travel-range" cx="60" cy="500" rx="0" ry="0"/>
+        <ellipse id="travel-galileo" class="travel-range" cx="60" cy="500" rx="0" ry="0"/>
+        <ellipse id="travel-voyager" class="travel-range" cx="60" cy="500" rx="0" ry="0"/>
         <ellipse id="travel-msl" class="travel-range" cx="60" cy="500" rx="0" ry="0"/>
+        <ellipse id="travel-constant" class="travel-range" cx="60" cy="500" rx="0" ry="0"/>
         <ellipse class="sun" cx="0" cy="500" rx="20" ry="20" fill="url(#sun-img)" />
         <!-- was originally set to 10 r -->
         <ellipse class="mercury orbit" cx="0" cy="500" rx="30" ry="30" />
@@ -71,10 +74,24 @@
         <button type="submit">submit</button>
         <br>
         <input type="checkbox" name="spacecraft" value="apollo" checked="checked">
-          <span class="checkmark">Apollo 11</span>
+          <span class="checkmark">Apollo 11 - 1969</span>
+          <span id="square0">__</span>
+        <br>
+        <input type="checkbox" name="spacecraft" value="galileo">
+        <span class="checkmark">Galileo - 1989</span>
+        <span id="square2">__</span>
+        <br>
+        <input type="checkbox" name="spacecraft" value="voyager">
+          <span class="checkmark">Voyager - 1977</span>
+          <span id="square1">__</span>
         <br>
         <input type="checkbox" name="spacecraft" value="msl">
-          <span class="checkmark">Mars Science Laboratory</span>
+          <span class="checkmark">Mars Science Laboratory - 2011</span>
+          <span id="square3">__</span>
+        <br>
+        <input type="checkbox" name="spacecraft" id="constant" value="constant"/>
+          <span class="checkmark">Constant 1G Thrust</span>
+          <span id="square4">__</span>
       </form>
     </div>
   </body>

@@ -54,12 +54,29 @@ function MarsScienceLaboratory() {
   this.speedKmPerHour = 93295;
 }
 
+function Voyager() {
+  this.speedKmPerHour = 61000;
+}
+
+function Galileo() {
+  this.speedKmPerHour = 38000;
+}
+
 var getPixelDistance = function(inputTime, speed) {
   // inputTime is in h
   var speed;//km p h
   var distance = ((inputTime*24) * speed); //km
   var distanceAU = distance / 150000000; //AU
   var distancePX = distanceAU * 50; //px
+  return distancePX;
+}
+
+var constantThrust = function(inputTime) {
+  var t = inputTime*24*60*60;
+  var a = 9.8;
+  var d = a * Math.pow((t / 2), 2);
+  var distanceAU = d / 150000000000;
+  var distancePX = distanceAU * 50;
   return distancePX;
 }
 
@@ -94,6 +111,8 @@ $(document).ready(function(event) {
 
   var apollo = new Apollo11();
   var msl = new MarsScienceLaboratory();
+  var voyager = new Voyager();
+  var galileo = new Galileo();
 
   $("#inputForm").submit(function(event) {
     event.preventDefault();
@@ -109,6 +128,15 @@ $(document).ready(function(event) {
     var ellipse = document.getElementById("travel-msl");
     ellipse.setAttributeNS(null, "rx", pixelDistance);
     ellipse.setAttributeNS(null, "ry", pixelDistance);
+    var ellipse = document.getElementById("travel-constant");
+    ellipse.setAttributeNS(null, "rx", pixelDistance);
+    ellipse.setAttributeNS(null, "ry", pixelDistance);
+    var ellipse = document.getElementById("travel-voyager");
+    ellipse.setAttributeNS(null, "rx", pixelDistance);
+    ellipse.setAttributeNS(null, "ry", pixelDistance);
+    var ellipse = document.getElementById("travel-galileo");
+    ellipse.setAttributeNS(null, "rx", pixelDistance);
+    ellipse.setAttributeNS(null, "ry", pixelDistance);
 
 
     for (var k=0; k<spacecraft.length; k++) {
@@ -120,6 +148,21 @@ $(document).ready(function(event) {
       } else if (spacecraft[k] === "msl") {
         pixelDistance = getPixelDistance(inputTime, msl.speedKmPerHour);
         var ellipse = document.getElementById("travel-msl");
+        ellipse.setAttributeNS(null, "rx", pixelDistance);
+        ellipse.setAttributeNS(null, "ry", pixelDistance);
+      } else if (spacecraft[k] === "constant") {
+        pixelDistance= constantThrust(inputTime);
+        var ellipse = document.getElementById("travel-constant");
+        ellipse.setAttributeNS(null, "rx", pixelDistance);
+        ellipse.setAttributeNS(null, "ry", pixelDistance);
+      } else if (spacecraft[k] === "voyager") {
+        pixelDistance = getPixelDistance(inputTime, voyager.speedKmPerHour);
+        var ellipse = document.getElementById("travel-voyager");
+        ellipse.setAttributeNS(null, "rx", pixelDistance);
+        ellipse.setAttributeNS(null, "ry", pixelDistance);
+      } else if (spacecraft[k] === "galileo") {
+        pixelDistance = getPixelDistance(inputTime, galileo.speedKmPerHour);
+        var ellipse = document.getElementById("travel-galileo");
         ellipse.setAttributeNS(null, "rx", pixelDistance);
         ellipse.setAttributeNS(null, "ry", pixelDistance);
       }

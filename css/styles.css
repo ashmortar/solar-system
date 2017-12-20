@@ -43,7 +43,53 @@ button {
   display: none;
 }
 
+a {
+  color: #f04fff;
+}
 
+a:hover {
+  color: #f04fff;
+  opacity: 0.5;
+}
+
+.btn-link {
+  color: #f04fff;
+}
+
+.btn-link:hover {
+  color: #f04fff;
+  opacity: 0.5;
+}
+
+#square0 {
+  border: white 1px solid;
+  background-color: #f04fff;
+  color: #f04fff;
+}
+
+#square1 {
+  border: white 1px solid;
+  background-color: #aa38b5;
+  color: #c741d3;
+}
+
+#square2 {
+  border: white 1px solid;
+  background-color: #c741d3;
+  color: #aa38b5;
+}
+
+#square3 {
+  border: white 1px solid;
+  background-color: #832a8c;
+  color: #832a8c;
+}
+
+#square4 {
+  border: white 1px solid;
+  background-color: #5a1c60;
+  color: #5a1c60;
+}
 
 .orbit {
   fill: none;
@@ -54,14 +100,30 @@ button {
 }
 
 #travel-apollo {
-  fill: yellow;
-  opacity: .25;
+  fill: #f04fff;
+  /*opacity: 0.5;*/
+}
+
+#travel-galileo {
+  fill: #c741d3;
+  opacity: 0.5;
+}
+
+#travel-voyager {
+  fill: #aa38b5;
+  opacity: 0.5;
 }
 
 #travel-msl {
-  fill: red;
-  opacity: .25;
+  fill: #832a8c;
+  opacity: 0.5;
 }
+
+#travel-constant {
+  fill: #5a1c60;
+  opacity: 0.5;
+}
+
 
 .tooltip-inner {
   max-width: 800px;
