@@ -102,16 +102,23 @@ $(document).ready(function(event) {
       spacecraft.push($(this).val());
     })
     var inputTime = parseInt($("#input").val());
+    var pixelDistance = 0;
+    var ellipse = document.getElementById("travel-apollo");
+    ellipse.setAttributeNS(null, "rx", pixelDistance);
+    ellipse.setAttributeNS(null, "ry", pixelDistance);
+    var ellipse = document.getElementById("travel-msl");
+    ellipse.setAttributeNS(null, "rx", pixelDistance);
+    ellipse.setAttributeNS(null, "ry", pixelDistance);
 
 
     for (var k=0; k<spacecraft.length; k++) {
       if (spacecraft[k] === "apollo") {
-        var pixelDistance = getPixelDistance(inputTime, apollo.speedKmPerHour);
+        pixelDistance = getPixelDistance(inputTime, apollo.speedKmPerHour);
         var ellipse = document.getElementById("travel-apollo");
         ellipse.setAttributeNS(null, "rx", pixelDistance);
         ellipse.setAttributeNS(null, "ry", pixelDistance);
       } else if (spacecraft[k] === "msl") {
-        var pixelDistance = getPixelDistance(inputTime, msl.speedKmPerHour);
+        pixelDistance = getPixelDistance(inputTime, msl.speedKmPerHour);
         var ellipse = document.getElementById("travel-msl");
         ellipse.setAttributeNS(null, "rx", pixelDistance);
         ellipse.setAttributeNS(null, "ry", pixelDistance);
