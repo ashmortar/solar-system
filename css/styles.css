@@ -1,4 +1,4 @@
-body  {
+.add-background  {
   background-image: url(../img/star1.jpg);
   font-family: monospace;
 }
@@ -43,8 +43,6 @@ button {
   display: none;
 }
 
-
-
 .orbit {
   fill: none;
   stroke: white;
@@ -63,12 +61,16 @@ button {
   opacity: .25;
 }
 
+.well {
+  background: rgba(46, 51, 56, 0.5);
+}
+
 .tooltip-inner {
   max-width: 800px;
   font-family: monospace;
   font-size: 1.5em;
   text-align: left;
-  background-color: rgba(0, 0, 0, 0.1)
+  background: rgba(46, 51, 56, 0.5);
 }
 
 .input-rect {
@@ -77,7 +79,7 @@ button {
   text-align: left;
   font-size: 20px;
   font-weight: 100;
-  background-color: rgba(0, 0, 0, 0.5);
+  background: rgba(46, 51, 56, 0.5);
   padding: 50px;
   border: 2px solid rgba(255, 255, 255, 0.5);
   color: rgba(255, 255, 255, 0.8);
@@ -103,7 +105,7 @@ button {
 }
 
 #Uranus {
-  color: #C7EDF0;
+  color: #a8fffa;
   text-decoration: underline;
 }
 
@@ -123,7 +125,7 @@ button {
 }
 
 #Earth {
-  color: #2873ff;
+  color: #66d633;
   text-decoration: underline;
 }
 
@@ -137,4 +139,16 @@ button {
   text-decoration: underline;
 }
 
+#Sun {
+  color:#e53d00;
+  text-decoration: underline;
+}
+
+.hidden-img {
+  display: none;
+}
+
+.remove-background {
+  background-color: black;
+}
 /*style="fill:none;stroke:green;stroke-width:2"*/
