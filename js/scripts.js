@@ -28,10 +28,6 @@ SolarSystem.prototype.setPlanets = function () {
 };
 
 
-var lightDaysDistance = function (planetStart, planetFinish) {
-  return (planetFinish.milesFromSun - planetStart.milesFromSun) * 365;
-};
-
 Planet.prototype.getInfo = function () {
   var str = "";
 
@@ -77,6 +73,7 @@ var constantThrust = function(inputTime) {
   var d = a * Math.pow((t / 2), 2);
   var distanceAU = d / 150000000000;
   var distancePX = distanceAU * 50;
+  alert(distancePX);
   return distancePX;
 }
 
