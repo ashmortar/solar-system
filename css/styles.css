@@ -52,6 +52,12 @@ a:hover {
   opacity: 0.5;
 }
 
+a:focus {
+  color: #f04fff;
+  opacity: 0.5;
+}
+
+
 .btn-link {
   color: #f04fff;
 }
