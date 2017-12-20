@@ -41,7 +41,8 @@
             <image x="0" y="0" height="1" width="1" xlink:href="https://i.imgur.com/RK5R1Zo.png" preserveAspectRatio = "none"></image>
           </pattern>
         </defs>
-        <ellipse id="travel" class="travel-range" cx="60" cy="500" rx="0" ry="0"/>
+        <ellipse id="travel-apollo" class="travel-range" cx="60" cy="500" rx="0" ry="0"/>
+        <ellipse id="travel-msl" class="travel-range" cx="60" cy="500" rx="0" ry="0"/>
         <ellipse class="sun" cx="0" cy="500" rx="20" ry="20" fill="url(#sun-img)" />
         <!-- was originally set to 10 r -->
         <ellipse class="mercury orbit" cx="0" cy="500" rx="30" ry="30" />
@@ -68,6 +69,12 @@
         <p>Enter how many days you are willing to travel:</p>
         <input id="input" type="number" value="35">
         <button type="submit">submit</button>
+        <br>
+        <input type="checkbox" name="spacecraft" value="apollo" checked="checked">
+          <span class="checkmark">Apollo 11</span>
+        <br>
+        <input type="checkbox" name="spacecraft" value="msl">
+          <span class="checkmark">Mars Science Laboratory</span>
       </form>
     </div>
   </body>
