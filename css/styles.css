@@ -1,6 +1,49 @@
 body  {
   background-image: url(../img/star1.jpg);
+  font-family: monospace;
 }
+
+h1 {
+  text-align: center;
+}
+
+.main-landing-panel {
+  margin-top: 300px;
+}
+
+.panel-transparent {
+  background: none;
+}
+
+.panel-transparent .panel-heading {
+  background: rgba(46, 51, 56, 0.5);
+  color: white;
+}
+
+.panel-transparent .panel-body {
+  background: rgba(46, 51, 56, 0.5);
+  color: white;
+}
+
+.left-sidebar {
+  background: rgba(46, 51, 56, 0.5);
+  color: white;
+}
+
+.right-div {
+  background: rgba(46, 51, 56, 0.5);
+  color: white;
+}
+
+button {
+  color: white;
+}
+
+.spaceTravel-div {
+  display: none;
+}
+
+
 
 .orbit {
   fill: none;

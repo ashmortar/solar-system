@@ -76,7 +76,7 @@ var drawTravelEllipse = function(j) {
 
 //front end
 
-$(document).ready(function() {
+$(document).ready(function(event) {
 
 
 
