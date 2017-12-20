@@ -63,9 +63,22 @@ var getPixelDistance = function(inputTime, speed) {
   return distancePX;
 }
 
+var drawTravelEllipse = function(j) {
+  console.log("I'm running");
+}
+//   setInterval(function() {
+//     var ellipse = document.getElementById("travel");
+//     ellipse.setAttributeNS(null, "rx", j);
+//     ellipse.setAttributeNS(null, "rx", j);
+//   }, 100)
+// }
+
+
 //front end
 
 $(document).ready(function() {
+
+
 
   var solarSystem = new SolarSystem();
   solarSystem.setPlanets();
@@ -84,14 +97,40 @@ $(document).ready(function() {
 
   $("#inputForm").submit(function(event) {
     event.preventDefault();
-
+    var spacecraft = [];
+    $("input:checkbox[name=spacecraft]:checked").each(function() {
+      spacecraft.push($(this).val());
+    })
     var inputTime = parseInt($("#input").val());
-    var pixelDistance = getPixelDistance(inputTime, msl.speedKmPerHour);
 
 
-    var ellipse = document.getElementById("travel");
-    ellipse.setAttributeNS(null, "rx", pixelDistance);
-    ellipse.setAttributeNS(null, "ry", pixelDistance);
+    for (var k=0; k<spacecraft.length; k++) {
+      if (spacecraft[k] === "apollo") {
+        var pixelDistance = getPixelDistance(inputTime, apollo.speedKmPerHour);
+        var ellipse = document.getElementById("travel-apollo");
+        ellipse.setAttributeNS(null, "rx", pixelDistance);
+        ellipse.setAttributeNS(null, "ry", pixelDistance);
+      } else if (spacecraft[k] === "msl") {
+        var pixelDistance = getPixelDistance(inputTime, msl.speedKmPerHour);
+        var ellipse = document.getElementById("travel-msl");
+        ellipse.setAttributeNS(null, "rx", pixelDistance);
+        ellipse.setAttributeNS(null, "ry", pixelDistance);
+      }
+    }
+    // var pixelDistance = getPixelDistance(inputTime, apollo.speedKmPerHour);
+    // var ellipse = document.getElementById("travel");
+    // ellipse.setAttributeNS(null, "rx", pixelDistance);
+    // ellipse.setAttributeNS(null, "ry", pixelDistance);
+
+
+    // for (var j = 0; j<= pixelDistance; j++) {
+    //   (function(j) {
+    //     setTimeout(function() {
+    //       ellipse.setAttributeNS(null, "rx", j);
+    //       ellipse.setAttributeNS(null, "ry", j);
+    //     }, 1000)
+    //   })(j);
+    // }
 
 
   });

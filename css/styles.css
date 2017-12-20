@@ -10,7 +10,12 @@ body  {
   stroke-width: 2;
 }
 
-#travel {
+#travel-apollo {
+  fill: yellow;
+  opacity: .25;
+}
+
+#travel-msl {
   fill: red;
   opacity: .25;
 }
