@@ -14,6 +14,10 @@ function SolarSystem() {
   this.systemObjects = [];
 }
 
+var planetPixelSize = function(number) {
+  return ((number-294)/ 829) + 3;
+}
+
 
 SolarSystem.prototype.setSystemObjects = function () {
   this.systemObjects.push(new SystemObject("Mercury", 3.60e7, "3.285 x 10^23 kg", "1,516 mi", "88 days", "58d 15h 30m", "10.892 km/h (3.026 m/s)"));
