@@ -33,7 +33,7 @@ SolarSystem.prototype.setSystemObjects = function () {
 SystemObject.prototype.getInfo = function () {
   var str = "";
 
-  str += '<div class="well"><span id="' + this.name + '">' + "Name:" +'</span> ' + this.name + '<br>';
+  str += '<div class="well"><img class="tooltip-img" src="img/' + this.name + '.gif" alt="no gif yet"><span id="' + this.name + '">' + "Name:" +'</span> ' + this.name + '<br>';
   str += '<span id="' + this.name + '">' + "Distance from sun:" +'</span> ' + this.milesFromSun.toExponential(2) + " miles" + '<br>';
   str += '<span id="' + this.name + '">' + "Mass:" +'</span> ' + this.mass + '<br>';
   str += '<span id="' + this.name + '">' + "Radius:" +'</span> ' + this.radius + '<br>';

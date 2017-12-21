@@ -140,15 +140,22 @@ a:focus {
 
 
 .well {
-  background: rgba(46, 51, 56, 0.5);
+  /*background: rgba(46, 51, 56, 0.5);*/
+  background: rgba(0, 0, 0, 0.7);
 }
 
 .tooltip-inner {
-  max-width: 800px;
+  max-width: 1000px;
   font-family: monospace;
   font-size: 1.5em;
   text-align: left;
   background: none;
+}
+
+.tooltip-img {
+  opacity: 0.7;
+  float: right;
+  height: 150px;
 }
 
 .input-rect {
