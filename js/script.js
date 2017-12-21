@@ -22,14 +22,15 @@ $(document).ready(function(event) {
     $("#landing").removeClass("add-background");
     $("#landing").addClass("remove-background")
     $(".content").hide();
-    $("#1observable").fadeIn("slow").delay(2000).fadeOut("fast");
-    $("#2local").delay(3000).fadeIn("slow").delay(2000).fadeOut("fast");
-    $("#3virgo").delay(6000).fadeIn("slow").delay(2000).fadeOut("fast");
-    $("#4localG").delay(9000).fadeIn("slow").delay(2000).fadeOut("fast");
-    $("#5milkyway").delay(12000).fadeIn("slow").delay(2000).fadeOut("fast");
-    $("#6interstellar").delay(15000).fadeIn("slow").delay(2000).fadeOut("fast");
+    $("#skip").show();
+    $("#1observable").fadeIn("slow").delay(4000).fadeOut("fast");
+    $("#2local").delay(5000).fadeIn("slow").delay(4000).fadeOut("fast");
+    $("#3virgo").delay(10000).fadeIn("slow").delay(4000).fadeOut("fast");
+    $("#4localG").delay(15000).fadeIn("slow").delay(4000).fadeOut("fast");
+    $("#5milkyway").delay(20000).fadeIn("slow").delay(4000).fadeOut("fast");
+    $("#6interstellar").delay(25000).fadeIn("slow").delay(4000).fadeOut("fast");
     setTimeout(function() {
       window.location.href = "solarSystem.html";
-    }, 17000);
+    }, 30000);
   });
 });

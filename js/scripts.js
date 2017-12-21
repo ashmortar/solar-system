@@ -92,7 +92,13 @@ var drawTravelEllipse = function(j) {
 
 $(document).ready(function(event) {
 
+  var winHeight = $(window).height();
 
+  if (winHeight > 800) {
+    var svg = document.getElementById("svg-tag");
+    svg.setAttributeNS(null, 'height', winHeight);
+    svg.setAttributeNS(null, 'viewBox', '0 0 4000 ' + winHeight);
+  }
 
   var solarSystem = new SolarSystem();
   solarSystem.setSystemObjects();

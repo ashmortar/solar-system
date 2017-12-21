@@ -7,6 +7,12 @@ h1 {
   text-align: center;
 }
 
+#skip {
+  display: none;
+  float: right;
+  font-size: 20px;
+}
+
 .main-landing-panel {
   margin-top: 300px;
 }
@@ -262,5 +268,11 @@ button {
 
 .remove-background {
   background-color: black;
+}
+
+.travel {
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
 }
 /*style="fill:none;stroke:green;stroke-width:2"*/
