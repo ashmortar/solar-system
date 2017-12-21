@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+    <title>Jupiter!</title>
+  </head>
+  <body class="add-background">
+    <!-- <object id="travel-svg" width="400" height="300" type="image/svg+xml" data="moving_circle.svg"></object> -->
+    <svg width="4000" height="2000" viewBox="0 0 4000 2000" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <pattern id="big-jupiter-img" patternContentUnits="objectBoundingBox" height="1" width="1">
+            <image x="0" y="0" height="1" width="1" xlink:href="img/big-jupiter.png" preserveAspectRatio = "none"></image>
+          </pattern>
+          <pattern id="io" patternContentUnits="objectBoundingBox" height="1" width="1">
+            <image x="0" y="0" height="1" width="1" xlink:href="img/io.png" preserveAspectRatio = "none"></image>
+          </pattern>
+          <pattern id="europa" patternContentUnits="objectBoundingBox" height="1" width="1">
+            <image x="0" y="0" height="1" width="1" xlink:href="img/europa.png" preserveAspectRatio = "none"></image>
+          </pattern>
+          <pattern id="ganymede" patternContentUnits="objectBoundingBox" height="1" width="1">
+            <image x="0" y="0" height="1" width="1" xlink:href="img/ganymede.png" preserveAspectRatio = "none"></image>
+          </pattern>
+        </defs>
+        <!-- <ellipse id="io-path" class="orbit" cx="950" cy="600" rx="600" ry="250" /> -->
+        <path id="io-path-top" class="orbit" d="M450 600 C450 250, 1450 250, 1450 600" />
+        <ellipse class="jupiter-img" cx="950" cy="600" rx="500" ry="500" fill="url(#big-jupiter-img)" />
+        <path id="io-path" class="orbit" d="M450 600 C450 950, 1450 950, 1450 600" />
+        <ellipse id="europa-path" class="orbit" cx="950" cy="600" rx="700" ry=350 />
+        <ellipse id="ganymede-path" class="orbit" cx="950" cy="600" rx="1000" ry=500 />
+        <ellipse id="io-moon" fill="url(#io)" cx="482" cy="500" rx="45" ry="45" />
+        <ellipse id="europa-moon" fill="url(#europa)" cx="1450" cy="355" rx="30" ry="30" />
+        <ellipse id="ganymede-moon" fill="url(#ganymede)" cx="950" cy="1100" rx="80" ry="80" />
+
+    </svg>
+
+    <!-- INPUT RECT -->
+    <div class="input-rect">
+      <button class="btn-link" id="back-2ss" type="button">Back to Solar System</button>
+    </div>
+
+
+  </body>
+</html>

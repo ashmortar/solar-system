@@ -32,4 +32,30 @@ $(document).ready(function(event) {
       window.location.href = "solarSystem.html";
     }, 17000);
   });
+
+  $("#io-moon").tooltip({
+    'container': 'body',
+    'placement': 'top',
+    'title': '<div class="well">Io</div>',
+    'html': 'true'
+  });
+
+  $("#europa-moon").tooltip({
+    'container': 'body',
+    'placement': 'top',
+    'title': '<div class="well">Europa</div>',
+    'html': 'true'
+  });
+
+  $("#ganymede-moon").tooltip({
+    'container': 'body',
+    'placement': 'top',
+    'title': '<div class="well">Ganymede</div>',
+    'html': 'true'
+  });
+
+  $("#back-2ss").click(function() {
+    window.location.href="solarSystem.html";
+  });
+
 });
