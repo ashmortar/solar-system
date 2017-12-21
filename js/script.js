@@ -38,21 +38,21 @@ $(document).ready(function(event) {
   $("#io-moon").tooltip({
     'container': 'body',
     'placement': 'top',
-    'title': '<div class="well">Io</div>',
+    'title': '<div class="well"><img class="tooltip-img" src="img/Io.gif" /><span class="io">Name:</span> Io <br><span class="io">Mass:</span> 8.93 x 10^22 kg (1.2 Moons) <br> <span class="io">Orbital Distance:</span> 421,800 km <br> <span class="io">Orbital Period:</span> 1.77 days <br> <span class="io">Surface Temperature:</span> -163 C <br> <span class="io">Discovery Date:</span> January 8, 1610 <br> <span class="io">Discovered By:</span> Galileo Galilei</div>',
     'html': 'true'
   });
 
   $("#europa-moon").tooltip({
     'container': 'body',
     'placement': 'top',
-    'title': '<div class="well">Europa</div>',
+    'title': '<div class="well"><img class="tooltip-img" src="img/Europa.gif" /><span class="europa">Name:</span> Europa <br><span class="europa">Mass:</span> 4.80 x 10^22 kg (0.65 Moons) <br> <span class="europa">Orbital Distance:</span> 671,000 km <br> <span class="europa">Orbital Period:</span> 3.55 days <br> <span class="europa">Surface Temperature:</span> -171 C <br> <span class="europa">Discovery Date:</span> January 8, 1610 <br> <span class="europa">Discovered By:</span> Galileo Galilei</div>',
     'html': 'true'
   });
 
   $("#ganymede-moon").tooltip({
     'container': 'body',
     'placement': 'top',
-    'title': '<div class="well">Ganymede</div>',
+    'title': '<div class="well"><img class="tooltip-img" src="img/Ganymede.gif" /><span class="ganymede">Name:</span> Ganymede <br><span class="ganymede">Mass:</span> 1.48 x10^23 kg (2.0 Moons) <br> <span class="ganymede">Orbital Distance:</span> 1,070,400 km <br> <span class="ganymede">Orbital Period:</span> 7.16 days <br> <span class="ganymede">Surface Temperature:</span> -163 C <br> <span class="ganymede">Discovery Date:</span> January 7, 1610 <br> <span class="ganymede">Discovered By:</span> Galileo Galilei</div>',
     'html': 'true'
   });
 

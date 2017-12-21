@@ -214,6 +214,22 @@ a:focus {
   text-decoration: underline;
 }
 
+.io {
+  color: #f2c159;
+  text-decoration: underline;
+}
+
+.europa {
+  color: #a04710;
+  text-decoration: underline;
+}
+
+.ganymede {
+  color: #515151;
+  text-decoration: underline;
+}
+
+
 .orbit {
   fill: none;
   stroke: white;
@@ -225,6 +241,7 @@ a:focus {
 /*Tool tip and other window styles*/
 .well {
   background: rgba(0, 0, 0, 0.7);
+  min-width: 600px;
 }
 
 .tooltip-inner {
@@ -235,7 +252,7 @@ a:focus {
   background: none;
 }
 
-.tooltip-inner img {
+.tooltip-img {
   float: right;
   height: 150px;
 }
