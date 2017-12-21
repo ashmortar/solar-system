@@ -121,6 +121,10 @@ $(document).ready(function(event) {
     window.location.href="index.html";
   })
 
+  $("#4").click(function() {
+    window.location.href="jupiter.html";
+  })
+
   //drawing ellipses
   $("#inputForm").submit(function(event) {
     event.preventDefault();
