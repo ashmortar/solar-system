@@ -8,6 +8,10 @@ By **telpuhova, rossfletcher19, ZEvans1, ashmortar**
 
 _Web application that displays a solar system model._
 
+## Website
+
+https://telpuhova.github.io/solar-system
+
 ### Specs
 | Behavior | Input | Output |
 | :------------- | :------------- | :------------- |
