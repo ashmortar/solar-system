@@ -248,6 +248,11 @@ button {
   display: none;
 }
 
+.slide-imgs {
+  height: 1000px;
+  width: 1000px;
+}
+
 .remove-background {
   background-color: black;
 }
