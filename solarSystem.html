@@ -9,9 +9,9 @@
     <script src="js/scripts.js"></script>
     <title>Solar system</title>
   </head>
-  <body>
+  <body class="add-background">
     <!-- <object id="travel-svg" width="400" height="300" type="image/svg+xml" data="moving_circle.svg"></object> -->
-    <svg width="2000" height="2000" viewBox="0 0 2000 2000" xmlns="http://www.w3.org/2000/svg">
+    <svg width="4000" height="2000" viewBox="0 0 4000 2000" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <pattern id="sun-img" patternContentUnits="objectBoundingBox" height="1" width="1">
             <image x="0" y="0" height="1" width="1" xlink:href="https://i.imgur.com/sOMbbRR.png" preserveAspectRatio = "none"></image>
@@ -40,13 +40,23 @@
           <pattern id="uranus-img" patternContentUnits="objectBoundingBox" height="1" width="1">
             <image x="0" y="0" height="1" width="1" xlink:href="https://i.imgur.com/RK5R1Zo.png" preserveAspectRatio = "none"></image>
           </pattern>
+          <pattern id="belt-img" patternContentUnits="objectBoundingBox" height="1" width="1">
+            <image x="0" y="0" height="1" width="1" xlink:href="https://i.imgur.com/Oz3ooTA.png" preserveAspectRatio = "none"></image>
+          </pattern>
+          <pattern id="ceres-img" patternContentUnits="objectBoundingBox" height="1" width="1">
+            <image x="0" y="0" height="1" width="1" xlink:href="https://i.imgur.com/VwXQlM4.png" preserveAspectRatio = "none"></image>
+          </pattern>
+          <pattern id="pluto-img" patternContentUnits="objectBoundingBox" height="1" width="1">
+            <image x="0" y="0" height="1" width="1" xlink:href="https://i.imgur.com/NJmxjhu.png" preserveAspectRatio = "none"></image>
+          </pattern>
         </defs>
         <ellipse id="travel-apollo" class="travel-range" cx="60" cy="500" rx="0" ry="0"/>
         <ellipse id="travel-galileo" class="travel-range" cx="60" cy="500" rx="0" ry="0"/>
         <ellipse id="travel-voyager" class="travel-range" cx="60" cy="500" rx="0" ry="0"/>
         <ellipse id="travel-msl" class="travel-range" cx="60" cy="500" rx="0" ry="0"/>
         <ellipse id="travel-constant" class="travel-range" cx="60" cy="500" rx="0" ry="0"/>
-        <ellipse class="sun" cx="0" cy="500" rx="20" ry="20" fill="url(#sun-img)" />
+        <ellipse id="asteroid-belt" class="" cx="0" cy="500" rx="200" ry="200" fill="url(#belt-img)" />
+        <!-- <ellipse class="sun" cx="0" cy="500" rx="20" ry="20" fill="url(#sun-img)" /> -->
         <!-- was originally set to 10 r -->
         <ellipse class="mercury orbit" cx="0" cy="500" rx="30" ry="30" />
         <ellipse id="0" class="mercury-dot" cx="26" cy="515" rx="5" ry="5" fill="url(#mercury-img)" />
@@ -65,36 +75,45 @@
         <ellipse class="neptune orbit" cx="0" cy="500" rx="1500" ry="1500"  />
         <ellipse id="7" class="neptune-dot" cx="1485" cy="710" rx="25" ry="25" fill="url(#neptune-img)" />
         <ellipse id="8" class="sun" cx="0" cy="500" rx="20" ry="20" fill="url(#sun-img)" />
+        <ellipse id="9" class="ceres" cx="138.5" cy="500" rx="4" ry="4" fill="url(#ceres-img)" />
+        <ellipse class="pluto orbit" cx="0" cy="500" rx="1975" ry="1975"  />
+        <ellipse id="10" class="neptune-dot" cx="1975" cy="500" rx="4" ry="4" fill="url(#pluto-img)" />
 
 
     </svg>
+
+    <!-- INPUT RECT -->
     <div class="input-rect">
       <form id="inputForm">
         <p>Enter how many days you are willing to travel:</p>
         <input id="input" type="number" value="35">
         <button type="submit">submit</button>
-        <br>
+        <button id="back">back to main page</button>
+        <hr>
+        <span id="square0">__</span>
         <input type="checkbox" name="spacecraft" value="apollo" checked="checked">
-          <span class="checkmark">Apollo 11 - 1969</span>
-          <span id="square0">__</span>
+        <span class="checkmark">Apollo 11 - 1969</span>
         <br>
+        <span id="square2">__</span>
         <input type="checkbox" name="spacecraft" value="galileo">
         <span class="checkmark">Galileo - 1989</span>
-        <span id="square2">__</span>
         <br>
+        <span id="square1">__</span>
         <input type="checkbox" name="spacecraft" value="voyager">
-          <span class="checkmark">Voyager - 1977</span>
-          <span id="square1">__</span>
+        <span class="checkmark">Voyager - 1977</span>
         <br>
+        <span id="square3">__</span>
         <input type="checkbox" name="spacecraft" value="msl">
-          <span class="checkmark">Mars Science Laboratory - 2011</span>
-          <span id="square3">__</span>
+        <span class="checkmark">Mars Science Laboratory - 2011</span>
         <br>
+        <span id="square4">__</span>
         <input type="checkbox" name="spacecraft" id="constant" value="constant"/>
-          <span class="checkmark">Constant 1G Thrust</span>
-          <span id="square4">__</span>
+        <span class="checkmark">Constant 1G Thrust</span>
       </form>
+
     </div>
+
+
   </body>
 </html>
 
@@ -103,8 +122,11 @@ mercury 0.4 AU
 venus 0.7 AU
 earth 1.0 AU
 mars 1.5 AU
+ceres 2.77 AU
+asteroid belt 3.2 AU
 jupiter 5.2 AU
 saturn 9.5 AU
 uranus 19 AU
 neptune 30 AU
+pluto 39.5 AU
 -->
