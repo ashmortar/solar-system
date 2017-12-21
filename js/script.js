@@ -17,6 +17,7 @@ $(document).ready(function(event) {
     $(".about-div").hide();
   });
 
+// This is produces the slideshow effect when you click the solarSystem link;
   $("#svg-system").click(function(event) {
     event.preventDefault();
     $("#landing").removeClass("add-background");
