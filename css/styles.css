@@ -310,4 +310,11 @@ button {
   margin-left: auto;
   margin-right: auto;
 }
-/*style="fill:none;stroke:green;stroke-width:2"*/
+
+.creators {
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  position: absolute;
+  bottom: 0%;
+  left: 30%;
+}
