@@ -88,8 +88,8 @@ a:focus {
 /*voyager*/
 #square1 {
   border: white 1px solid;
-  background-color: #c741d3;
-  color: #c741d3;
+  background-color: #b13abc;
+  color: #b13abc;
 }
 
 /*galileo*/
@@ -101,14 +101,14 @@ a:focus {
 
 #square3 {
   border: white 1px solid;
-  background-color: #832a8c;
-  color: #832a8c;
+  background-color: #611f68;
+  color: #611f68;
 }
 
 #square4 {
   border: white 1px solid;
-  background-color: #5a1c60;
-  color: #5a1c60;
+  background-color: #401244;
+  color: #401244;
 }
 
 .orbit {
@@ -121,27 +121,27 @@ a:focus {
 
 #travel-apollo {
   fill: #f089f9;
-  /*opacity: 0.5;*/
+  opacity: 0.3;
 }
 
 #travel-galileo {
   fill: #f04fff;
-  opacity: 0.5;
+  opacity: 0.3;
 }
 
 #travel-voyager {
-  fill: #aa38b5;
-  opacity: 0.5;
+  fill: #b13abc;
+  opacity: 0.3;
 }
 
 #travel-msl {
-  fill: #832a8c;
-  opacity: 0.5;
+  fill: #611f68;;
+  opacity: 0.3;
 }
 
 #travel-constant {
-  fill: #5a1c60;
-  opacity: 0.5;
+  fill: #401244;
+  opacity: 0.3;
 }
 
 
