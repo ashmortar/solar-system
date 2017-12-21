@@ -1,5 +1,6 @@
 //back end
 
+
 //front end
 
 $(document).ready(function(event) {
@@ -18,15 +19,17 @@ $(document).ready(function(event) {
 
   $("#svg-system").click(function(event) {
     event.preventDefault();
-    $("body").removeClass("add-background");
-    $("body").addClass("remove-background")
+    $("#landing").removeClass("add-background");
+    $("#landing").addClass("remove-background")
     $(".content").hide();
     $("#1observable").fadeIn("slow").delay(2000).fadeOut("fast");
-    $("#2local").fadeIn("slow").delay(2000).fadeOut("fast");
-    $("#3virgo").fadeIn("slow").delay(2000).fadeOut("fast");
-    $("#4localG").fadeIn("slow").delay(2000).fadeOut("fast");
-    $("#5milkyway").fadeIn("slow").delay(2000).fadeOut("fast");
-    $("#6interstellar").fadeIn("slow").delay(2000).fadeOut("fast");
-    //$(".output").delay(3000).fadeIn("slow");
+    $("#2local").delay(3000).fadeIn("slow").delay(2000).fadeOut("fast");
+    $("#3virgo").delay(6000).fadeIn("slow").delay(2000).fadeOut("fast");
+    $("#4localG").delay(9000).fadeIn("slow").delay(2000).fadeOut("fast");
+    $("#5milkyway").delay(12000).fadeIn("slow").delay(2000).fadeOut("fast");
+    $("#6interstellar").delay(15000).fadeIn("slow").delay(2000).fadeOut("fast");
+    setTimeout(function() {
+      window.location.href = "solarSystem.html";
+    }, 17000);
   });
 });
