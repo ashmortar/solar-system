@@ -7,10 +7,9 @@
     <script src="js/jquery-3.2.1.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="js/scripts.js"></script>
-    <title>Solar system</title>
+    <title>Solar System</title>
   </head>
   <body class="add-background">
-    <!-- <object id="travel-svg" width="400" height="300" type="image/svg+xml" data="moving_circle.svg"></object> -->
     <svg id="svg-tag" width="4000" height="800" viewBox="0 0 4000 800" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <pattern id="sun-img" patternContentUnits="objectBoundingBox" height="1" width="1">
@@ -59,9 +58,6 @@
         <ellipse id="travel-galileo" class="travel-range" cx="60" cy="500" rx="0" ry="0"/>
         <ellipse id="travel-apollo" class="travel-range" cx="60" cy="500" rx="0" ry="0"/>
         <ellipse id="asteroid-belt" class="" cx="0" cy="500" rx="200" ry="200" fill="url(#belt-img)" />
-        <!-- <ellipse id="kuiper-belt" class="" cx="0" cy="500" rx="2600" ry="2600" fill="url(#kuiper-img)" /> -->
-        <!-- <ellipse class="sun" cx="0" cy="500" rx="20" ry="20" fill="url(#sun-img)" /> -->
-        <!-- was originally set to 10 r -->
         <ellipse class="mercury orbit" cx="0" cy="500" rx="30" ry="30" />
         <ellipse id="0" class="mercury-dot" cx="26" cy="515" rx="4.5" ry="4.5" fill="url(#mercury-img)" />
         <ellipse class="venus orbit" cx="0" cy="500" rx="45" ry="45" />
@@ -82,9 +78,6 @@
         <ellipse id="9" class="ceres" cx="138.5" cy="500" rx="3" ry="3" fill="url(#ceres-img)" />
         <ellipse class="pluto orbit" cx="0" cy="500" rx="1975" ry="1975"  />
         <ellipse id="10" class="pluto-dot" cx="1975" cy="500" rx="3.5" ry="3.5" fill="url(#pluto-img)" />
-
-
-
     </svg>
 
     <!-- INPUT RECT -->
@@ -115,14 +108,12 @@
         <input type="checkbox" name="spacecraft" id="constant" value="constant"/>
         <span class="checkmark">Constant 1G Thrust</span>
       </form>
-
     </div>
-
-
   </body>
 </html>
 
 <!--
+These distances were used to determine the radii of the planet orbits on the solarSystem page;
 mercury 0.4 AU
 venus 0.7 AU
 earth 1.0 AU
